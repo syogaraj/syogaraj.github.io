@@ -46,4 +46,16 @@ Python provides two different modules, `sched` and `concurrent.futures` and it i
 
 The Python package for ScheduledThreadPoolExecutor is published in [PyPI](https://pypi.org/project/scheduled-thread-pool-executor/) as well. You can install it using `pip install scheduled-thread-pool-executor` . It provides the three main methods `schedule, schedule_at_fixed_rate, schedule_at_fixed_delay` similar to the one in Java. I believe this will be useful for many who are in search of such implementations in the future.
 
+```python
+"""
+Usage
+"""
+
+from scheduled_thread_pool_executor import ScheduledThreadPoolExecutor
+scheduled_executor = ScheduledThreadPoolExecutor(max_workers=5)
+scheduled_executor.schedule(task, 0)  # equals to schedule once, where task is a callable
+scheduled_executor.schedule_at_fixed_rate(task, 0, 5)  # schedule immediately and run periodically for every 5 secs
+scheduled_executor.schedule_at_fixed_delay(task, 5, 10)  # schedule after 5secs (initial delay) and run periodically for every 10secs
+```
+
 Thank you for reading! See you in the next post.
