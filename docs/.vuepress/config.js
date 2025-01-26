@@ -2,7 +2,8 @@ import { viteBundler } from "@vuepress/bundler-vite";
 import { defaultTheme } from "@vuepress/theme-default";
 import { defineUserConfig } from "vuepress";
 import { registerComponentsPlugin } from "@vuepress/plugin-register-components";
-import { path } from "vuepress/utils"
+import { path } from "vuepress/utils";
+import { shikiPlugin } from "@vuepress/plugin-shiki";
 
 export default defineUserConfig({
   bundler: viteBundler(),
@@ -16,10 +17,18 @@ export default defineUserConfig({
   title: "Yogaraj.S",
   plugins: [
     [
-      registerComponentsPlugin(
-      {
+      registerComponentsPlugin({
         componentsDir: path.resolve(__dirname, "./components"),
       }),
-    ]
+    ],
+    [
+      shikiPlugin({
+        langs: ["c", "python", "bash", "java"],
+        notationFocus: true,
+        notationHighlight: true,
+        notationWordHighlight: true,
+        collapsedLines: true
+      }),
+    ],
   ],
 });
