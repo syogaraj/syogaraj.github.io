@@ -2,6 +2,10 @@
 lang: en-US
 title: DelayQueue in Python
 date: "2022-01-21"
+head:
+  - - meta:
+    - name: keywords
+      content: delay queue python delayqueue
 ---
 
 ## Queue
