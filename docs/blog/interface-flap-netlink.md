@@ -4,7 +4,7 @@ description: "A detailed explanation on how to identify link flap using netlink"
 lang: en-US
 date: "2025-01-26"
 head:
-  - - meta:
+  - - meta
     - name: keywords
       content: interface flap netlink research linux
 ---

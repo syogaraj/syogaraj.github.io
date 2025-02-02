@@ -3,9 +3,9 @@ date: '2022-03-10'
 lang: en-US
 title: Debugging inconsistent timezone between Java & Linux
 head:
-    - - meta:
-        - name: keywords
-          content: java linux timezone timezone_difference debugging
+  - - meta
+    - name: keywords
+      content: java linux timezone timezone_difference debugging tz
 ---
 
 # Debugging inconsistent timezone between Java & Linux
