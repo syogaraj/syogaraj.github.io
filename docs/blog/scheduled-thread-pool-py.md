@@ -1,14 +1,21 @@
 ---
-date: "2022-06-19"
+date: 2022-06-19
 lang: en-US
 title: ScheduledThreadPoolExecutor in Python
+description: ScheduledThreadPoolExecutor implementation in python
+category:
+  - python
+tag:
+  - thread
+  - threadpool
+  - schedulers
 head:
-  - - meta:
-        - name: keywords
-          content: python threadpool executor threadpoolexecutor scheduler
+  - - meta
+    - name: keywords
+      content: python threadpool executor threadpoolexecutor scheduler
 ---
 
-Similar to Java APIs provided in ScheduledThreadPoolExecutor, I’ve implemented the same in Python. Read further for a detailed explanation.
+Python lacks a built-in equivalent to Java’s ScheduledThreadPoolExecutor for scheduling tasks to run after a delay or at fixed intervals. This article explains about the implementation of ScheduledThreadPoolExecutor in python with similar Java APIs.
 
 ## Thread Pool
 

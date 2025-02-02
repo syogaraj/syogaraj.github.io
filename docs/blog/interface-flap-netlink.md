@@ -1,15 +1,23 @@
 ---
 title: "Identifying network interface link flap using netlink"
-description: "A detailed explanation on how to identify link flap using netlink"
+description: "A detailed explanation on how to identify link flaps using netlink"
 lang: en-US
-date: "2025-01-26"
+date: 2025-01-26
+category:
+    - linux
+tag:
+    - netlink
+    - flap
 head:
   - - meta
     - name: keywords
       content: interface flap netlink research linux
+star: true
 ---
 
 # Identifying network interface link flap using netlink
+
+Network interface flapping occurs when an interface repeatedly transitions between up and down states, causing intermittent connectivity and degrading overall network performance. This instability can lead to service disruptions, complicate troubleshooting efforts, and reduce the reliability of network communications. The challenge is to accurately detect, analyze, and mitigate these flapping events to ensure a stable and robust network environment.
 
 ## Network interface link
 

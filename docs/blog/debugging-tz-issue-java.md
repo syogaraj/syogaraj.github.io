@@ -1,16 +1,19 @@
 ---
-date: '2022-03-10'
+date: 2022-03-10
 lang: en-US
 title: Debugging inconsistent timezone between Java & Linux
+category: linux
+tag:
+    - java
+    - tz
 head:
   - - meta
     - name: keywords
       content: java linux timezone timezone_difference debugging tz
+star: true
 ---
 
 # Debugging inconsistent timezone between Java & Linux
-
-## Intro
 
 Have you ever noticed that in some cases, Java will not take the time zone which is configured in a server? This has serious impacts if the server handles scheduling tasks and runs them periodically.
 

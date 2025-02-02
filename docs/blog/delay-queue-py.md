@@ -1,12 +1,18 @@
 ---
 lang: en-US
 title: DelayQueue in Python
-date: "2022-01-21"
+date: 2022-01-21
+category: 
+    - python
+tag:
+    - queue
 head:
   - - meta
     - name: keywords
       content: delay queue python delayqueue
 ---
+
+In systems that require scheduled or deferred execution of tasks, a delay queue serves as a critical component to hold elements until their specified delay expires. However, python lacks a built-in delay queue implementation. Lets get into the details.
 
 ## Queue
 

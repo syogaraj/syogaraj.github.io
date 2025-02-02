@@ -1,5 +1,19 @@
 ---
 sidebar: false
+title: Home
+icon: material-symbols:home
+home: true
+portfolio: true
+avatar: https://avatars.githubusercontent.com/u/9082051?v=4
+titles: 
+    - "A Curious Tech Geek"
+tagline: 
+    - "A Tech Geek’s Journey Through Code, Linux, and Complex System"
+features:
+    - title: Blog posts
+      link: /blog/
+      icon: material-symbols:book
+      type: primary
 ---
 
 # Hello, there!
@@ -9,6 +23,6 @@ By day, I'm a developer and leader, but really, I'm just someone who gets a kick
 This blog is my digital notebook. It's where I'll share the war stories from my tech adventures, the challenges that keep me up at night, and the moments of pure joy when a complex solution finally clicks into place. Expect raw, unfiltered insights into the world of technology through my lens.
 Want to geek out about tech, explore complex systems, or just see how a developer's mind works? You're in the right place.
 
-## Blog Posts
+### [Recent Articles](/article/)
 
 <RecentArticles/>
