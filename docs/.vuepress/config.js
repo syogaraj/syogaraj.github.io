@@ -12,7 +12,9 @@ export default defineUserConfig({
     sidebar: "heading",
     // navbar: [{ text: "Blog", link: "/blog/" }],
   }),
-
+  head:[
+    ['meta', {name: 'google-site-verification', 'content': 'fiql57E-4MbcN3dvCE3NYp2e5vRu03Pg2bDERier0gc'}]
+  ],
   lang: "en-US",
   title: "Yogaraj.S",
   plugins: [
