@@ -4,11 +4,11 @@ title: Home
 icon: material-symbols:home
 home: true
 portfolio: true
-avatar: https://avatars.githubusercontent.com/u/9082051?v=4
+avatar: /images/me.jpeg
 titles: 
     - "A Curious Tech Geek"
 tagline: 
-    - "A Tech Geek’s Journey Through Code, Linux, and Complex System"
+    - "Chronicles of a Curious Tech Geek"
 features:
     - title: Blog posts
       link: /blog/
