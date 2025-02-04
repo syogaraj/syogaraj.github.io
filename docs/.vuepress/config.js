@@ -3,8 +3,8 @@ import { defaultTheme } from "@vuepress/theme-default";
 import { defineUserConfig } from "vuepress";
 import { registerComponentsPlugin } from "@vuepress/plugin-register-components";
 import { path } from "vuepress/utils";
-import { blogPlugin } from "@vuepress/plugin-blog";
 import theme from "./theme.js";
+import { googleAnalyticsPlugin } from "@vuepress/plugin-google-analytics";
 
 export default defineUserConfig({
   bundler: viteBundler(),
@@ -20,5 +20,8 @@ export default defineUserConfig({
         componentsDir: path.resolve(__dirname, "./components"),
       }),
     ],
+    googleAnalyticsPlugin({
+      id: "G-H8EJQ97RLW",
+    }),
   ],
 });
