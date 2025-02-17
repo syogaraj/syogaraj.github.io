@@ -4,7 +4,7 @@ title: Home
 icon: material-symbols:home
 home: true
 portfolio: true
-avatar: /images/me.jpeg
+avatar: /images/me.webp
 titles: 
     - "A Curious Tech Geek"
 tagline: 
