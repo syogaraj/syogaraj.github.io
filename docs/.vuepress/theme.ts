@@ -32,6 +32,8 @@ export default hopeTheme({
     align: true,
     highlighter: {
       type: "shiki",
+      notationFocus: true,
+      collapsedLines: true,
     },
   },
 

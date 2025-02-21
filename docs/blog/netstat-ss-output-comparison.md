@@ -45,23 +45,15 @@ The main difference between netstat and ss is that, ss uses `netlink` to list th
 
 `ss` - [main()](https://github.com/iproute2/iproute2/blob/41710ace5e8fadff354f3dba67bf27ed3a3c5ae7/misc/ss.c#L5938) method parses the command-line arguments, sets relevant checks, flags etc., For the argument `-ltnp`, few flags and filters are set. If `-p` option is used, it invokes the `user_ent_hash_build()` method.
 
-```c title="ss.c" {19-20}
-  case 'n':
-   numeric = 1;
-   break;
+```c title="ss.c" {11-12}
 ...
-  case 'p':
+ case 'p':
    show_processes++;
    break;
 ...
-        case 'l':
+ case 'l':
    state_filter = (1 << SS_LISTEN) | (1 << SS_CLOSE);
    break;
-...
-        case 't':
-   filter_db_set(&current_filter, TCP_DB, true);
-   break;
-
 ...
 ...
  if (show_processes || show_threads || show_proc_ctx || show_sock_ctx)
@@ -100,28 +92,15 @@ root@10:/# cat /proc/80/stat
 
 The [`user_ent_add()`](https://github.com/iproute2/iproute2/blob/41710ace5e8fadff354f3dba67bf27ed3a3c5ae7/misc/ss.c#L522) method calculates the hash based on the inode in the form of **linked list** (highlighted below). When printing the details, `user_ent_hash` is iterated and the `users` is printed with **all** the details available in the linked list.
 
-```c {22-24} title="user_ent_add method"
+```c {9-11} title="user_ent_add method"
 static void user_ent_add(unsigned int ino, char *task,
      int pid, int tid, int fd,
      char *task_ctx,
      char *sock_ctx)
 {
  struct user_ent *p, **pp;
-
- p = malloc(sizeof(struct user_ent));
- if (!p) {
-  fprintf(stderr, "ss: failed to malloc buffer\n");
-  abort();
- }
- p->next = NULL;
- p->ino = ino;
- p->pid = pid;
- p->tid = tid;
- p->fd = fd;
- p->task = strdup(task);
- p->task_ctx = strdup(task_ctx);
- p->socket_ctx = strdup(sock_ctx);
-
+ ...
+ ...
  pp = &user_ent_hash[user_ent_hashfn(ino)];
  p->next = *pp;
  *pp = p;
@@ -150,17 +129,7 @@ The [`prg_cache_add()`](https://github.com/ecki/net-tools/blob/9ee12437b677869ec
 
 This is basically assuming that there can be **only ONE process per port**. The comment in the source code also mentions the same (highlighted below). So, this is why `netstat` is unable to report multiple process per port.
 
-```c {18-22} title='netstat.c'
-#define PRG_HASH_SIZE 211
-
-static struct prg_node {
-    struct prg_node *next;
-    unsigned long inode;
-    char name[PROGNAME_WIDTH];
-    char scon[SELINUX_WIDTH];
-} *prg_hash[PRG_HASH_SIZE];
-
-
+```c {8-11} title='netstat.c'
 static void prg_cache_add(unsigned long inode, char *name, const char *scon)
 {
     unsigned hi = PRG_HASHIT(inode);
@@ -174,22 +143,7 @@ static void prg_cache_add(unsigned long inode, char *name, const char *scon)
             return;
         }
     }
-    if (!(*pnp = malloc(sizeof(**pnp))))
-         return;
-    pn = *pnp;
-    pn->next = NULL;
-    pn->inode = inode;
-    safe_strncpy(pn->name, name, sizeof(pn->name));
-
-    {
-        int len = (strlen(scon) - sizeof(pn->scon)) + 1;
-        if (len > 0)
-                safe_strncpy(pn->scon, &scon[len + 1], sizeof(pn->scon));
-        else
-                safe_strncpy(pn->scon, scon, sizeof(pn->scon));
-    }
-
-}
+    ...
 ```
 
 ## Conclusion
