@@ -1,0 +1,7 @@
+User-agent: *
+
+Allow: /
+User-agent:*
+Disallow:
+
+Sitemap: https://syogaraj.github.io/sitemap.xml
