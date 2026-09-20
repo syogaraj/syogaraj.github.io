@@ -2,7 +2,7 @@
     <div>
         <ul>
             <li v-for="post in recentFiles">
-                <a :href="post.path">{{ post.meta.t }}</a>
+                <a :href="post.path">{{ post.meta.title }}</a>
             </li>
         </ul>
     </div>
@@ -29,10 +29,10 @@ export default {
                 routeDetail.path = route;
                 posts.push(routeDetail);
             }
-
+            console.log(posts);
             return posts.sort((a, b) => {
-                let a_time = a.meta.d;
-                let b_time = b.meta.d;
+                let a_time = a.meta.date;
+                let b_time = b.meta.date;
                 let diff = a_time - b_time;
                 if(diff < 0) return 1;
 				if(diff > 0) return -1;

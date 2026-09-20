@@ -1,0 +1,18 @@
+// Small, theme-native refinements: the theme continues to own structure,
+// responsiveness, color-mode behavior, and component styling.
+.vp-portfolio-content {
+  max-width: 46rem;
+}
+
+.vp-portfolio-content h2 {
+  letter-spacing: -0.02em;
+}
+
+.vp-portfolio-content a {
+  font-weight: 600;
+}
+
+.vp-page .vp-blog-info,
+.vp-page .vp-page-info {
+  font-size: 0.9rem;
+}

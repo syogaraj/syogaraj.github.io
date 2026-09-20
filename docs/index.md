@@ -1,28 +1,37 @@
 ---
 sidebar: false
-title: Home
+title: Yogaraj S. | Systems and Software Notes
 icon: material-symbols:home
-home: true
 portfolio: true
+name: Yogaraj S.
 avatar: /images/me.webp
-titles: 
-    - "A Curious Tech Geek"
-tagline: 
-    - "Chronicles of a Curious Tech Geek"
-features:
-    - title: Blog posts
-      link: /blog/
-      icon: material-symbols:book
-      type: primary
+avatarAlt: Portrait of Yogaraj S.
+welcome: "Hello, I’m"
+titles:
+  - "A curious systems engineer"
+  - "A Linux and eBPF enthusiast"
+  - "A builder who likes hard problems"
+medias:
+  - name: GitHub
+    icon: simple-icons:github
+    url: https://github.com/syogaraj
+  - name: LinkedIn
+    icon: simple-icons:linkedin
+    url: https://www.linkedin.com/in/syogaraj
 ---
 
-# Hello, there!
+## Things I am learning and building
 
-I'm Yogaraj – a tech geek with an insatiable curiosity about how things work under the hood. My world revolves around lines of code, Linux terminals, and the beautiful complexity of technological systems.
-By day, I'm a developer and leader, but really, I'm just someone who gets a kick out of solving puzzles that most people would walk away from. Whether it's debugging a tricky application or understanding the intricate dance of system architectures, I'm all in. Linux isn't just an operating system for me – it's a playground of possibilities.
-This blog is my digital notebook. It's where I'll share the war stories from my tech adventures, the challenges that keep me up at night, and the moments of pure joy when a complex solution finally clicks into place. Expect raw, unfiltered insights into the world of technology through my lens.
-Want to geek out about tech, explore complex systems, or just see how a developer's mind works? You're in the right place.
+I use this site to write about Linux, networking, eBPF, databases, and the problems I run into while working with them.
+
+Most posts are based on something I was debugging, exploring, or trying to understand better.
 
 ### [Recent Articles](/article/)
 
 <RecentArticles/>
+
+### Explore the writing
+
+- [Browse all articles](/article/)
+- [Explore by topic](/category/)
+- [Follow the timeline](/timeline/)

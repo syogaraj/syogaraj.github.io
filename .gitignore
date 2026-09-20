@@ -5,3 +5,6 @@ docs/.vuepress/.cache
 # VuePress default build output directory
 docs/.vuepress/dist
 node_modules
+
+# mac dirs.
+.DS_Store

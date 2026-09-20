@@ -1,0 +1,22 @@
+// Theme Hope palette overrides. These variables are consumed by the theme in
+// both light and dark modes, keeping the design native to VuePress Theme Hope.
+$theme-color: #0f766e;
+$theme-color-dark: #2dd4bf;
+$theme-color-light: #ccfbf1;
+$theme-color-hover: #115e59;
+
+$bg-color: #fbfdfd;
+$bg-color-secondary: #f1f7f6;
+$bg-color-tertiary: #e7f1ef;
+$border-color: #d7e5e2;
+$text-color: #1f2937;
+$text-color-secondary: #52616b;
+
+[data-theme="dark"] {
+  --vp-c-bg: #101817;
+  --vp-c-bg-alt: #162220;
+  --vp-c-bg-elv: #1c2a27;
+  --vp-c-text: #e5f1ee;
+  --vp-c-text-mute: #aabbb7;
+  --vp-c-border: #29403b;
+}
